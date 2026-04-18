@@ -30,6 +30,11 @@ LootBox is a decentralized loot box platform built on the Stellar blockchain usi
 
 ---
 
+## Screen Recording
+[![LootBox Demo Video](https://cdn.loom.com/sessions/thumbnails/ad5f978e01044b08a7ab1a0936e007e9-with-play.gif)](https://www.loom.com/share/ad5f978e01044b08a7ab1a0936e007e9)
+
+--
+
 ## Vision
 
 LootBox aims to redefine digital gaming economies by bringing full transparency to chance-based mechanics. In traditional gaming, loot box odds are hidden and unverifiable. On Stellar, every roll is recorded on-chain and auditable by anyone. We envision a future where all gaming reward systems are provably fair, where players truly own their outcomes, and where blockchain technology creates a new standard of trust in digital entertainment. LootBox is the first step toward a fully transparent, community-driven gaming ecosystem on Stellar.
