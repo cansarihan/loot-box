@@ -1,7 +1,6 @@
 import { Button, Icon, Layout } from "@stellar/design-system"
 import { Routes, Route, Outlet, NavLink } from "react-router-dom"
 import styles from "./App.module.css"
-import ConnectAccount from "./components/ConnectAccount"
 import { labPrefix } from "./contracts/util"
 import Debug from "./pages/Debug"
 import Home from "./pages/Home"
@@ -21,9 +20,9 @@ function App() {
 const AppLayout: React.FC = () => (
 	<div className={styles.AppLayout}>
 		<Layout.Header
-			projectId="Scaffold"
-			projectTitle="Scaffold"
-			hasThemeSwitch={true}
+			projectId="LootBox"
+			projectTitle="⚡ LootBox"
+			hasThemeSwitch={false}
 			contentCenter={
 				<>
 					<NavLink to="/debug">
@@ -37,12 +36,11 @@ const AppLayout: React.FC = () => (
 					<NavLink to={labPrefix()}>
 						<Button variant="tertiary" size="md">
 							<Icon.SearchMd size="md" />
-							Transaction Explorer
+							Tx Explorer
 						</Button>
 					</NavLink>
 				</>
 			}
-			contentRight={<ConnectAccount />}
 		/>
 
 		<main>
@@ -56,25 +54,18 @@ const AppLayout: React.FC = () => (
 		<Layout.Footer>
 			<nav>
 				<a
+					href="https://developers.stellar.org/docs/smart-contracts"
+					className="Link Link--secondary"
+					target="_blank"
+				>
+					<Icon.BookOpen01 size="sm" /> Soroban Docs
+				</a>
+				<a
 					href="https://github.com/theahaco/scaffold-stellar"
 					className="Link Link--secondary"
 					target="_blank"
 				>
 					<Icon.GitPullRequest size="sm" /> GitHub
-				</a>
-				<a
-					href="https://www.youtube.com/watch?v=0syGaIn3ULk&list=PLmr3tp_7-7Gjj6gn5-bBn-QTMyaWzwOU5"
-					className="Link Link--secondary"
-					target="_blank"
-				>
-					<Icon.Youtube size="sm" /> Tutorial
-				</a>
-				<a
-					href="https://scaffoldstellar.org"
-					className="Link Link--secondary"
-					target="_blank"
-				>
-					<Icon.BookOpen01 size="sm" /> View docs
 				</a>
 			</nav>
 		</Layout.Footer>

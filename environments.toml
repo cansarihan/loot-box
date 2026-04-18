@@ -13,6 +13,12 @@ fungible_allowlist_example = { client = true, constructor_args = "--name Example
 nft_enumerable_example = { client = true, constructor_args = "--uri https://example.com/nft/ --name ExampleNFT --symbol ENFT --owner me" }
 
 # Rather than in one list, TOML allows specifying contracts in their own "sections"
+[development.contracts.loot_box]
+client = true
+constructor_args = """
+--admin me
+"""
+
 [development.contracts.guess_the_number]
 # Generate a contract client (NPM package) for this contract. This means:
 #   - compile (build) the contract source to Wasm
@@ -76,14 +82,7 @@ name = "testnet-user"
 default = true
 
 [staging.contracts]
-# soroban-atomic-swap-contract = { id = "C123..." }
-# soroban-auth-contract = { id = "C234..." }
-# soroban-errors-contract = { id = "C345..." }
-# soroban-hello-world-contract = { id = "C456..." }
-# soroban-increment-contract = { id = "C567..." }
-# soroban-token-contract = { id = "C678..." }
-# eurc = { id = "C789..." }
-guess_the_number = { client = true, constructor_args = "--admin me", after_deploy = "reset" }
+loot_box = { client = true, constructor_args = "--admin testnet-user" }
 
 ### Production environment configuration
 [production.network]

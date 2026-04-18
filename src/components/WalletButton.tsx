@@ -34,8 +34,8 @@ export const WalletButton = () => {
 				opacity: isPending ? 0.6 : 1,
 			}}
 		>
-			<Text as="div" size="sm">
-				Wallet Balance: {balances?.xlm?.balance ?? "-"} XLM
+			<Text as="div" size="sm" style={{ color: "#c8d8e8", fontSize: "0.8rem" }}>
+				{balances?.xlm ? parseFloat(balances.xlm.balance).toLocaleString(undefined, { maximumFractionDigits: 2 }) : "-"} XLM
 			</Text>
 
 			<div id="modalContainer">
@@ -53,15 +53,20 @@ export const WalletButton = () => {
 								display: "flex",
 								alignItems: "baseline",
 								minWidth: 0,
+								color: "#c8d8e8",
 							}}
 						>
-							<span style={{ flexShrink: 0 }}>Connected as&nbsp;</span>
+							<span style={{ flexShrink: 0, color: "#c8d8e8" }}>Connected as&nbsp;</span>
 							<code
 								style={{
 									overflow: "hidden",
 									textOverflow: "ellipsis",
 									whiteSpace: "nowrap",
 									fontSize: "0.85em",
+									background: "#0d1520",
+									color: "#00d4ff",
+									padding: "2px 6px",
+									borderRadius: "4px",
 								}}
 								title={address}
 							>

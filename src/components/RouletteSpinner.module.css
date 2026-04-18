@@ -1,0 +1,69 @@
+.spinnerWrapper {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  background: #0d1117;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.5);
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.reel {
+  display: flex;
+  gap: 8px;
+  padding: 0 8px;
+  will-change: transform;
+}
+
+.reelItem {
+  min-width: 132px;
+  height: 90px;
+  border: 2px solid;
+  border-radius: 10px;
+  background: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.itemRarity {
+  font-size: 0.65rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.itemName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.centerMarker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 148px;
+  border: 2px solid rgba(0, 212, 255, 0.7);
+  border-radius: 12px;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  z-index: 10;
+}

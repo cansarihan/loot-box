@@ -1,2 +1,256 @@
-/* Import font for Stellar Design System */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inconsolata:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inconsolata:wght@500&family=Orbitron:wght@400;700;900&display=swap");
+
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --neon-blue: #00d4ff;
+  --neon-purple: #a855f7;
+  --neon-gold: #fbbf24;
+  --bg-dark: #07080f;
+  --bg-card: #0f1623;
+  --bg-card2: #161f2e;
+  --border-dim: rgba(0, 212, 255, 0.14);
+  --text-primary: #e8edf5;
+  --text-muted: #7a8fa6;
+
+  /* ── Stellar Design System dark overrides ── */
+  --sds-clr-gray-01: #07080f;
+  --sds-clr-gray-02: #0f1623;
+  --sds-clr-gray-03: #161f2e;
+  --sds-clr-gray-04: #1e2d40;
+  --sds-clr-gray-05: #253347;
+  --sds-clr-gray-06: #2e3f55;
+  --sds-clr-gray-07: #3d5268;
+  --sds-clr-gray-08: #5a7290;
+  --sds-clr-gray-09: #7a8fa6;
+  --sds-clr-gray-10: #a0b4c8;
+  --sds-clr-gray-11: #c8d8e8;
+  --sds-clr-gray-12: #e8edf5;
+  --sds-clr-gray-13: #f4f7fa;
+
+  --sds-clr-lilac-09: #a855f7;
+  --sds-clr-lilac-10: #c084fc;
+  --sds-clr-lilac-11: #d8b4fe;
+  --sds-clr-lilac-12: #f3e8ff;
+
+  color-scheme: dark;
+}
+
+/* ═══════════════════════════════════════════════
+   BASE RESET
+═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  background: var(--bg-dark) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse at 15% 60%, rgba(168,85,247,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(0,212,255,0.06) 0%, transparent 55%);
+}
+
+h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; color: var(--text-primary); }
+p, span, li, label, td, th { color: var(--text-primary); }
+strong { color: #fff; }
+code {
+  background: #0d1520;
+  color: var(--neon-blue);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* ═══════════════════════════════════════════════
+   STELLAR DESIGN SYSTEM — FULL DARK OVERRIDE
+═══════════════════════════════════════════════ */
+
+/* Layout shells */
+.Layout,
+[class*="Layout__"],
+[class*="Layout"] {
+  background: var(--bg-dark) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Header */
+[class*="Layout__header"],
+header {
+  background: rgba(7,8,15,0.97) !important;
+  border-bottom: 1px solid var(--border-dim) !important;
+  backdrop-filter: blur(14px) !important;
+}
+
+/* Footer */
+[class*="Layout__footer"],
+footer {
+  background: rgba(7,8,15,0.97) !important;
+  border-top: 1px solid var(--border-dim) !important;
+}
+
+/* Project title in header */
+[class*="Layout__header"] [class*="title"],
+[class*="Layout__header"] h1,
+[class*="Layout__header"] span,
+[class*="Layout__header"] p {
+  color: var(--text-primary) !important;
+}
+
+/* ── ALL SDS BUTTONS ── */
+/* Primary button → dark bg + white text */
+button[class*="Button--primary"],
+[class*="Button--primary"] {
+  background: linear-gradient(135deg, #1a3a5c, #0f2540) !important;
+  border: 1px solid rgba(0,212,255,0.5) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 0 12px rgba(0,212,255,0.2) !important;
+}
+button[class*="Button--primary"]:hover:not(:disabled),
+[class*="Button--primary"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1e4a78, #122d52) !important;
+  box-shadow: 0 0 20px rgba(0,212,255,0.35) !important;
+  color: #ffffff !important;
+}
+button[class*="Button--primary"]:disabled,
+[class*="Button--primary"]:disabled {
+  background: #1a2535 !important;
+  border-color: #2a3a4a !important;
+  color: #4a6070 !important;
+  box-shadow: none !important;
+}
+
+/* Secondary button */
+button[class*="Button--secondary"],
+[class*="Button--secondary"] {
+  background: #161f2e !important;
+  border: 1px solid rgba(0,212,255,0.3) !important;
+  color: #c8d8e8 !important;
+}
+button[class*="Button--secondary"]:hover:not(:disabled) {
+  background: #1e2d40 !important;
+  color: #ffffff !important;
+}
+
+/* Tertiary button */
+button[class*="Button--tertiary"],
+[class*="Button--tertiary"] {
+  background: transparent !important;
+  border: 1px solid rgba(0,212,255,0.2) !important;
+  color: #c8d8e8 !important;
+}
+button[class*="Button--tertiary"]:hover:not(:disabled),
+[class*="Button--tertiary"]:hover:not(:disabled) {
+  background: rgba(0,212,255,0.08) !important;
+  border-color: rgba(0,212,255,0.4) !important;
+  color: #ffffff !important;
+}
+button[class*="Button--tertiary"]:disabled,
+[class*="Button--tertiary"]:disabled {
+  color: #3a5060 !important;
+  border-color: #1e2d3a !important;
+}
+
+/* Error/destructive button */
+button[class*="Button--error"],
+[class*="Button--error"] {
+  background: #3a0f0f !important;
+  border-color: #ef4444 !important;
+  color: #fca5a5 !important;
+}
+
+/* Generic button fallback */
+button:not([class*="Button"]) {
+  color: var(--text-primary);
+}
+
+/* ── MODAL ── */
+[class*="Modal"],
+[class*="Modal__"] {
+  background: #0f1623 !important;
+  border: 1px solid rgba(0,212,255,0.2) !important;
+  color: var(--text-primary) !important;
+}
+[class*="Modal__heading"],
+[class*="Modal__body"],
+[class*="Modal__footer"] {
+  background: #0f1623 !important;
+  color: var(--text-primary) !important;
+  border-color: rgba(0,212,255,0.12) !important;
+}
+[class*="Modal"] * { color: var(--text-primary) !important; }
+[class*="Modal__overlay"] {
+  background: rgba(0,0,0,0.75) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* ── TEXT COMPONENT ── */
+[class*="Text"] { color: var(--text-primary) !important; }
+
+/* ── PROFILE / ADDRESS ── */
+[class*="Profile"],
+[class*="Profile__"] {
+  background: #161f2e !important;
+  border: 1px solid rgba(0,212,255,0.2) !important;
+  color: var(--text-primary) !important;
+}
+[class*="Profile"] * { color: var(--text-primary) !important; }
+
+/* ── TOOLTIP ── */
+[class*="Tooltip"],
+[class*="Tooltip__"] {
+  background: #1e2d40 !important;
+  border: 1px solid rgba(0,212,255,0.2) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── NOTIFICATION ── */
+[class*="Notification"],
+[class*="Notification__"] {
+  background: #0f1623 !important;
+  border-color: rgba(0,212,255,0.2) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── INPUT / SELECT ── */
+input, select, textarea {
+  background: #0f1623 !important;
+  border: 1px solid rgba(0,212,255,0.2) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px;
+}
+input::placeholder { color: #4a6070 !important; }
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: rgba(0,212,255,0.5) !important;
+  box-shadow: 0 0 0 2px rgba(0,212,255,0.1) !important;
+}
+
+/* ── LINKS ── */
+a { color: var(--neon-blue); text-decoration: none; }
+a:hover { color: #40e0ff; text-decoration: underline; }
+.Link, .Link--primary { color: var(--neon-blue) !important; }
+.Link--secondary { color: #a0b4c8 !important; }
+.Link--secondary:hover { color: var(--text-primary) !important; }
+
+/* ── NETWORK PILL ── */
+/* Override the light bg/text on NetworkPill */
+[style*="backgroundColor: rgb(240, 242, 245)"],
+[style*="backgroundColor:#F0F2F5"] {
+  background-color: #161f2e !important;
+}
+[style*="color: rgb(74, 83, 98)"],
+[style*="color:#4A5362"] {
+  color: #c8d8e8 !important;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #07080f; }
+::-webkit-scrollbar-thumb { background: #2e3f55; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3d5268; }

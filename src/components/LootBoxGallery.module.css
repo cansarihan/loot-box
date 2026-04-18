@@ -1,0 +1,132 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.boxCard {
+  background: #0f1623;
+  border: 1px solid var(--box-color, #444);
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  box-shadow: 0 0 18px var(--box-glow, transparent);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.boxCard:hover {
+  box-shadow: 0 0 35px var(--box-glow, transparent);
+}
+
+.boxEmoji {
+  font-size: 2.8rem;
+  filter: drop-shadow(0 0 8px var(--box-glow, transparent));
+}
+
+.boxTier {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: var(--box-color, #fff);
+  text-shadow: 0 0 8px var(--box-glow, transparent);
+  margin: 0;
+}
+
+.boxPrice {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e8edf5;
+}
+
+.boxDesc {
+  font-size: 0.68rem;
+  color: #6b7f96;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Payout rows */
+.payouts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  margin: 0.2rem 0;
+}
+
+.payoutRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payoutRarity {
+  font-size: 0.68rem;
+  color: #8899aa;
+}
+
+.payoutXlm {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #4ade80;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Buttons */
+.openBtn {
+  margin-top: 0.3rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--box-color, #444);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--box-color, #fff);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-weight: 600;
+}
+
+.openBtn:hover:not(:disabled) {
+  background: var(--box-color, #444);
+  color: #000;
+  box-shadow: 0 0 14px var(--box-glow, transparent);
+}
+
+.openBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  color: #6b7f96;
+  border-color: #2a3545;
+}
+
+.ticketBtn {
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(0,212,255,0.4);
+  border-radius: 8px;
+  background: rgba(0,212,255,0.07);
+  color: #00d4ff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.ticketBtn:hover:not(:disabled) {
+  background: rgba(0,212,255,0.15);
+  box-shadow: 0 0 12px rgba(0,212,255,0.3);
+}
+
+.ticketBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

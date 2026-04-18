@@ -83,7 +83,7 @@ export const fetchBalances = async (address: string) => {
 	try {
 		const { balances } = await horizon.accounts().accountId(address).call()
 		const mapped = balances.reduce((acc, b) => {
-			b.balance = formatter.format(Number(b.balance))
+			// Keep raw balance string — do NOT format with Intl to avoid locale issues
 			const key =
 				b.asset_type === "native"
 					? "xlm"

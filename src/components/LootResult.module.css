@@ -1,0 +1,141 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.card {
+  background: #0f1623;
+  border: 2px solid var(--rarity-color, #444);
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  max-width: 380px;
+  width: 92%;
+  box-shadow:
+    0 0 60px color-mix(in srgb, var(--rarity-color, #444) 35%, transparent),
+    0 20px 60px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.emoji {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 14px var(--rarity-color, transparent));
+}
+
+.rarityBadge {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--rarity-color, #fff);
+  background: color-mix(in srgb, var(--rarity-color, #444) 12%, transparent);
+  border: 1px solid var(--rarity-color, #444);
+  padding: 0.22rem 0.8rem;
+  border-radius: 20px;
+}
+
+.itemName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.45rem;
+  color: var(--rarity-color, #fff);
+  text-shadow: 0 0 16px color-mix(in srgb, var(--rarity-color, transparent) 55%, transparent);
+  margin: 0;
+}
+
+.itemId {
+  color: #4a6070;
+  font-size: 0.82rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Win banner */
+.winBanner {
+  background: linear-gradient(135deg, rgba(74,222,128,0.12), rgba(34,197,94,0.06));
+  border: 1px solid rgba(74,222,128,0.35);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.winLabel {
+  font-size: 0.72rem;
+  color: #86efac;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'Inter', sans-serif;
+}
+
+.winAmount {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4ade80;
+  text-shadow: 0 0 16px rgba(74,222,128,0.5);
+}
+
+.winSub {
+  font-size: 0.7rem;
+  color: #4a6070;
+  font-family: 'Inter', sans-serif;
+}
+
+.noWin {
+  font-size: 0.75rem;
+  color: #4a6070;
+  font-family: 'Inter', sans-serif;
+  padding: 0.5rem;
+}
+
+/* Proof */
+.proofSection {
+  background: #07080f;
+  border: 1px solid rgba(0,212,255,0.12);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  width: 100%;
+}
+
+.proofLabel {
+  font-size: 0.7rem;
+  color: #4a6070;
+  margin-bottom: 0.3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.proofHash {
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.68rem;
+  color: #00d4ff;
+  word-break: break-all;
+  display: block;
+}
+
+/* Close button */
+.closeBtn {
+  margin-top: 0.25rem;
+  padding: 0.75rem 2rem;
+  background: var(--rarity-color, #444);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  width: 100%;
+}
+.closeBtn:hover { opacity: 0.88; transform: scale(1.02); }

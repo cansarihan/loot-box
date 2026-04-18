@@ -1,0 +1,55 @@
+.empty {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.itemCard {
+  background: #111827;
+  border: 1px solid var(--item-color, #444);
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--item-color, transparent) 20%, transparent);
+  cursor: default;
+}
+
+.rarityDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--item-color, #444);
+  box-shadow: 0 0 8px var(--item-color, transparent);
+}
+
+.itemName {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.2;
+}
+
+.rarity {
+  font-size: 0.65rem;
+  color: var(--item-color, #94a3b8);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+
+.seed {
+  font-size: 0.65rem;
+  color: #475569;
+  font-family: 'Inconsolata', monospace;
+}
