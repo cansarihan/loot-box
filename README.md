@@ -16,14 +16,14 @@ LootBox is a decentralized loot box platform built on the Stellar blockchain usi
 
 ### User Experience & Interface
 
-| **Main Dashboard** | **The Spinner** |
+| **Main Dashboard** | **Win Odds** |
 |:---:|:---:|
 | ![Dashboard](assets/screenshots/loot-1.png) | ![Spinner](assets/screenshots/loot-2.png) |
 | *Choose your tier and start winning.* | *Provably fair on-chain randomization.* |
 
 <br>
 
-| **Box Opening** | **Inventory** | **Social Quests** |
+| **Inventory** | **Social Quests** | **Safes** |
 |:---:|:---:|:---:|
 | ![Inventory](assets/screenshots/loot-3.png) | ![Quests](assets/screenshots/loot-4.png) | ![Opening](assets/screenshots/loot-5.png) |
 | *Real-time winning results.* | *Manage your digital collection.* | *Complete tasks to earn free tickets.* |
