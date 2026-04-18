@@ -31,9 +31,10 @@ LootBox is a decentralized loot box platform built on the Stellar blockchain usi
 ---
 
 ## Screen Recording
-[![LootBox Demo Video](https://cdn.loom.com/sessions/thumbnails/ad5f978e01044b08a7ab1a0936e007e9-with-play.gif)](https://www.loom.com/share/ad5f978e01044b08a7ab1a0936e007e9)
 
---
+You can watch the project in action here: [Click here to watch the demo video](https://www.loom.com/share/ad5f978e01044b08a7ab1a0936e007e9)
+
+---
 
 ## Vision
 
