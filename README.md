@@ -1,6 +1,6 @@
 # LootBox — Provably Fair On-Chain Loot Boxes on Stellar
 
-![LootBox Banner](https://via.placeholder.com/1200x300/07080f/00d4ff?text=LOOTBOX+%7C+Stellar+Soroban)
+![LootBox Banner](assets/screenshots/loot-1.png)
 
 > **Open loot boxes. Win XLM. Verified on-chain.** > A transparent, provably fair loot box system powered by Stellar Soroban smart contracts.
 
@@ -25,7 +25,7 @@ LootBox is a decentralized loot box platform built on the Stellar blockchain usi
 
 | **Box Opening** | **Inventory** | **Social Quests** |
 |:---:|:---:|:---:|
-| ![Opening](assets/screenshots/loot-3.png) | ![Inventory](assets/screenshots/loot-4.png) | ![Quests](assets/screenshots/loot-5.png) |
+| ![Inventory](assets/screenshots/loot-3.png) | ![Quests](assets/screenshots/loot-4.png) | ![Opening](assets/screenshots/loot-5.png) |
 | *Real-time winning results.* | *Manage your digital collection.* | *Complete tasks to earn free tickets.* |
 
 ---
