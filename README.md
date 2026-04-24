@@ -1,6 +1,7 @@
 # LootBox — Provably Fair On-Chain Loot Boxes on Stellar
 
 ![LootBox Banner](assets/screenshots/loot-1.png)
+<img width="798" height="158" alt="contract-rise-in" src="https://github.com/user-attachments/assets/79fcd2eb-e986-4dac-8428-ac86f2d55037" />
 
 > **Open loot boxes. Win XLM. Verified on-chain.** > A transparent, provably fair loot box system powered by Stellar Soroban smart contracts.
 
